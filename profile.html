@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/main.css?v=1">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/dropzone/dropzone.css">
+    <title>JewWish</title>
+  </head>
+  <body class="page page_dating">
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <img src="img/logo/logo_header.png" alt="JewWish" width="262" height="50">
+        </div>
+        <!-- header__logo -->
+        <div class="header__user">
+          <div class="user">
+            <a href="#" class="link"><i class="icon-user_enter"></i>Родин Шестаков</a>
+          </div>
+          <div class="logout">
+            <a href="index.html" class="link">Выход<i class="icon-logout"></i></a>
+          </div>
+        </div>
+        <!-- header__user -->
+      </div>
+    </header>
+
+    <main class="profile">
+      <div class="container">
+        <div class="nav">
+          <a href="#" class="btn active">Профиль</a>
+          <a href="candidat.html" class="btn">Предложения</a>
+        </div>
+
+      <div class="profile__content">
+
+        <div class="profile__contacts contacts">
+          <div class="contacts__photo">
+            <img src="img/content/candidat.png" alf="profile photo" width="150" height="150">
+          </div>
+          <p class="contacts__name">Родин Шестаков</p>
+          <p class="contacts__age">39 лет</p>
+          <p class="contacts__status">Статус: <span>Подтвержден</span></p>
+          <div class="contacts__social social">
+            <span>Мой координатор: </span>
+            <a href="tel:+79124124555" class="social__phone phone">Абрамов Моисеевич<i class="icon-phone_small"></i></a>
+            <a href="#" class="social__whatsapp whatsapp"><i class="icon-whatsapp"></i></a>
+            <a href="#" class="social__telegram telegram"><i class="icon-telegram"></i></a>
+            <a href="#" class="social__viber viber"><i class="icon-viber"></i></a>
+          </div>
+
+        </div>
+
+        <form class="profile__form form form_border" id="profile-form-main">
+          <div class="input-block">
+            <label class="input-block__input-label">Телефон</label>
+            <div class="input-block__input">
+              <input class="input" type="text" required name="phone" maxlength="1000" id="phone" placeholder="+7(324)2343232">
+              <div class="errorMessage">Заполните поле 'Телефон'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block__file">
+            <label class="input-block__input-label">Документы</label>
+
+            <div class="file-upload">
+              <label>
+                <input type="file" name="file" id="file">
+                <span>Загрузить документ</span>
+              </label>
+            </div>
+            <input type="text" id="filename" class="filename" disabled>
+
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Предпочитаемый координатор</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="male" name="sex" id="male">
+              <label for="male">Мужчина</label>
+              <input class="radio" type="radio" value="female" name="sex" checked id="female">
+              <label for="female">Женщина</label>
+            </div>
+          </div>
+
+          <button class="button button_small-font submit disabled">Сохранить</button>
+        </form>
+        <!-- profile-form-main -->
+
+        <form class="profile__form form" id="profile-form-info">
+          <div class="input-block">
+            <label class="input-block__input-label">Дата рождения:</label>
+            <div class="input-block__input">
+              <input class="input" type="text" required name="birth" maxlength="1000" id="birth" placeholder="12 | 03 | 1994">
+              <div class="errorMessage">Заполните поле 'Дата рождения'</div>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label class="input-block__input-label">Фотографии</label>
+            <div class="input-block__input">
+              <div class="dropzone" id="dropzonewidget">
+                
+              </div> 
+              <div class="errorMessage">Заполните поле 'Фотографии'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block__select">
+            <label class="input-block__input-label input-block__select-label">Город</label>
+            <select name="city">
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+          </div>
+
+          <div class="input-block input-block__select">
+            <label class="input-block__input-label input-block__select-label">Родной город</label>
+            <select name="city-of-birth">
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Иногородние предложения:</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="nonresident-yes" name="nonresident" id="nonresident-yes">
+              <label for="nonresident-yes">Да</label>
+              <input class="radio" type="radio" value="nonresident-no" name="nonresident" checked id="nonresident-no">
+              <label for="nonresident-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Ссылки на соц сети</label>
+            <div class="input-block__input">
+              <textarea 
+                class="input textarea" 
+                required name="phone" 
+                maxlength="1000" 
+                id="social" 
+                placeholder="www.vk.com
+www.ok.com
+www.facebook.com"></textarea>
+              <div class="errorMessage">Заполните поле 'Ссылки на соц сети'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Показывать твои соц сети другим участникам</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="show-social-yes" name="show-social" id="show-social-yes">
+              <label for="show-social-yes">Да</label>
+              <input class="radio" type="radio" value="show-social-no" name="show-social" checked id="show-social-no">
+              <label for="show-social-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block__select">
+            <label class="input-block__input-label input-block__select-label">Образование</label>
+            <select name="education">
+              <option value="Бакалавр">Бакалавр</option>
+              <option value="Магистр">Магистр</option>
+            </select>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Где и на кого ты учишься/учился</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="education-descr" maxlength="1000" id="education-descr" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Где и на кого ты учишься/учился'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Работаешь сейчас</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="job-yes" name="job" id="job-yes">
+              <label for="job-yes">Да</label>
+              <input class="radio" type="radio" value="job-no" name="job" checked id="job-no">
+              <label for="job-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Расскажи о работе</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="job-descr" maxlength="1000" id="job-descr" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Расскажи о работе'</div>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label class="input-block__input-label">Каков твой доход</label>
+            <div class="input-block__input">
+              <input class="input" type="text" name="income" maxlength="1000" id="income" placeholder="2000">
+              <div class="errorMessage">Заполните поле 'Каков твой доход'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Собственная жилплощадь</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="apartment-yes" name="apartment" id="apartment-yes">
+              <label for="apartment-yes">Да</label>
+              <input class="radio" type="radio" value="apartment-no" name="apartment" checked id="apartment-no">
+              <label for="apartment-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Говоришь по русски</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="rus-yes" name="rus" id="rus-yes">
+              <label for="rus-yes">Да</label>
+              <input class="radio" type="radio" value="rus-no" name="rus" checked id="rus-no">
+              <label for="rus-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Говоришь по английски</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="en-yes" name="en" id="en-yes">
+              <label for="en-yes">Да</label>
+              <input class="radio" type="radio" value="en-no" name="en" checked id="en-no">
+              <label for="en-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Говоришь на иврите</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="he-yes" name="he" id="he-yes">
+              <label for="he-yes">Да</label>
+              <input class="radio" type="radio" value="he-no" name="he" checked id="he-no">
+              <label for="he-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Какие еще языки ты знаешь</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="languages" maxlength="1000" id="languages" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Какие еще языки ты знаешь'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Есть ли у тебя хобби?</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="hobbies" maxlength="1000" id="hobbies" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Есть ли у тебя хобби?'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Занимаетешься спортом</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="sport-yes" name="sport" id="sport-yes">
+              <label for="sport-yes">Да</label>
+              <input class="radio" type="radio" value="sport-no" name="sport" checked id="sport-no">
+              <label for="sport-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block__select">
+            <label class="input-block__input-label input-block__select-label">Планы на личную жизнь</label>
+            <select name="plans">
+              <option value="Завести детей">Завести детей</option>
+              <option value="Завести детей">Завести детей</option>
+            </select>
+          </div>
+
+          <div class="input-block input-block__select">
+            <label class="input-block__input-label input-block__select-label">Еврейская "ориентация"</label>
+            <select name="orientation">
+              <option value="Традиционая">Традиционая</option>
+              <option value="Традиционая">Традиционая</option>
+            </select>
+          </div>
+
+          <div class="input-block input-block_radio">
+            <label class="input-block__radio-label">Есть еврейское имя</label>
+            <div class="input-block__radio-group">
+              <input class="radio" type="radio" value="jewish-name-yes" name="jewish-name" id="jewish-name-yes">
+              <label for="jewish-name-yes">Да</label>
+              <input class="radio" type="radio" value="jewish-name-no" name="jewish-name" checked id="jewish-name-no">
+              <label for="jewish-name-no">Нет</label>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">В каких еврейских организациях ты бывал</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="organizations" maxlength="1000" id="organizations" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'В каких еврейских организациях ты бывал'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Три твоих достоинства</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="advantages" maxlength="1000" id="advantages" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Три твоих достоинства'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Три твоих недостатка</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="disadvantages" maxlength="1000" id="disadvantages" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Три твоих недостатка'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Что ты ищешь в партнере</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="accept" maxlength="1000" id="accept" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Что ты ищешь в партнере'</div>
+            </div>
+          </div>
+
+          <div class="input-block input-block-textarea">
+            <label class="input-block__input-label input-block__textarea-label">Что ты не приемлешь в партнере</label>
+            <div class="input-block__input">
+              <textarea class="input textarea" required name="against" maxlength="1000" id="against" placeholder="Текст"></textarea>
+              <div class="errorMessage">Заполните поле 'Что ты не приемлишь в партнере'</div>
+            </div>
+          </div>
+
+          <button class="button button_small-font submit disabled">Сохранить</button>
+
+        </form>
+        <!-- profile-form-info -->
+
+      </div>
+      <!-- profile__content -->
+      </div>
+    </main> 
+
+    <footer class="footer">
+      <div class="container">
+        <div class="bottom-block">
+          <div class="bottom-block__icon-wrap">
+            <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+              <i class="fab fa-vk"></i>
+            </a>
+            <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__logo">
+          <img src="img/logo/logo_footer.png" alf="JewWish" width="163" height="31px">
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/jquery.nice-select.js" type="text/javascript"></script>
+  <script src="js/select.js"></script>
+  <script src="js/file-upload.js"></script>
+  <script src="js/dropzone/dropzone.js"></script>
+  <script src="js/dropzone/init.js"></script>
+
+</html>

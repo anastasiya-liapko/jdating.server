@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/main.css?v=1">
+    <link rel="stylesheet" href="css/page.css">
+    <title>JewWish</title>
+  </head>
+  <body class="index">
+    <main class="index">
+      <div class="logo"><img src="img/logo/logowht.png" alt="logo"></div>
+      <div class="two-col">
+        <div class="block">
+          <h1>JewWish</h1>
+          <h2>Еврейские знакомства</h2>
+          <a class="link" href="about.html">О проекте</a>
+        </div>
+        <div class="block">
+          <div class="caption-button">Зарегистрируйся сегодня и начни ходить на свидания уже в январе</div>
+          <button class="button" id="js-reg-btn">Зарегистрироваться</button>
+        </div>
+      </div>
+
+      <div class="bottom-block">
+        <button class="bottom-block__button button button_transparent" id="js-enter-btn">Войти</button>
+        <div class="bottom-block__caption">А еще у нас есть чат-боты</div>
+        <div class="bottom-block__icon-wrap">
+          <a class="bottom-block__icon-item" href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="bottom-block__icon-item" href="#">
+            <i class="fab fa-vk"></i>
+          </a>
+          <a class="bottom-block__icon-item" href="#">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" id="js-reg-modal">
+      <div class="modal-dialog">
+        <div class="modal__body">
+          <div class="modal__close"><img src="img/icon/close.svg" alt="Закрыть"></div>
+          <div class="modal__caption">Анкета</div>
+          <form class="form" novalidate id="js-reg-form">
+            <div class="input-block">
+              <label class="input-block__input-label">Имя</label>
+              <div class="input-block__input">
+                <input class="input" type="text" required name="name" maxlength="1000" id="name">
+                <div class="errorMessage">Заполните поле 'Имя'</div>
+              </div>
+            </div>
+            <div class="input-block">
+              <label class="input-block__input-label">Фамилия</label>
+              <div class="input-block__input">
+                <input class="input" type="text" required name="lastname" maxlength="200" id="lastname">
+                <div class="errorMessage">Заполните поле 'Фамилия'</div>
+              </div>
+            </div>
+            <div class="input-block">
+              <label class="input-block__input-label">Телефон</label>
+              <div class="input-block__input">
+                <input class="input phone" type="tel" required name="phone" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" id="phone">
+                <div class="errorMessage">Заполните поле 'Телефон'</div>
+              </div>
+            </div>
+            <div class="input-block">
+              <label class="input-block__input-label">Возраст</label>
+              <div class="input-block__input">
+                <input class="input" type="number" step="1" min="0" max="150" name="age" required id="age">
+                <div class="errorMessage">Заполните поле 'Возраст'</div>
+              </div>
+            </div>
+            <div class="input-block input-block_radio">
+              <label class="input-block__radio-label">Пол</label>
+              <div class="input-block__radio-group">
+                <input class="radio" type="radio" value="male" name="sex" id="male">
+                <label for="male">М</label>
+                <input class="radio" type="radio" value="female" name="sex" checked id="female">
+                <label for="female">Ж</label>
+              </div>
+            </div>
+            <div class="input-block input-block_radio">
+              <label class="input-block__radio-label">Мама вашей мамы еврейка?</label>
+              <div class="input-block__radio-group">
+                <input class="radio" type="radio" value="yes" name="jew" required id="j-yes">
+                <label for="j-yes">Да</label>
+                <input class="radio" type="radio" value="no" name="jew" checked id="j-no">
+                <label for="j-no">Нет</label>
+              </div>
+            </div>
+            <div class="input-block input-block_radio" id="radio-conversion">
+              <label class="input-block__radio-label">Прошли ли вы гиюр?</label>
+              <div class="input-block__radio-group">
+                <input class="radio" type="radio" value="yes" name="conversion" required checked id="c-yes">
+                <label for="c-yes">Да</label>
+                <input class="radio" type="radio" value="no" name="conversion" id="c-no">
+                <label for="c-no">Нет</label>
+              </div>
+            </div>
+            <div class="input-block input-block_radio">
+              <label class="input-block__radio-label">Согласны на обработку персональных данных?</label>
+              <div class="input-block__radio-group">
+                <input class="radio" type="radio" value="yes" name="personal" required checked id="p-yes">
+                <label for="p-yes">Да</label>
+                <input class="radio" type="radio" value="no" name="personal" id="p-no">
+                <label for="p-no">Нет</label>
+              </div>
+            </div>
+            <button class="button button_small-font submit disabled">Отправить</button>
+            <div class="fail-text">Анкета не отправлена, попробуйте еще раз</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- js-reg-modal -->
+
+    <div class="modal" id="js-enter-modal">
+      <div class="modal-dialog">
+        <div class="modal__body">
+          <div class="modal__close"><img src="img/icon/close.svg" alt="Закрыть"></div>
+          <div class="modal__caption">Вход</div>
+          <span class="modal__text">Введите номер телефона указаный при регистрации, и мы пришлем вам СМС с кодом</span>
+          <form class="form" novalidate id="js-enter-form">
+            
+            <div class="input-block">
+              <label class="input-block__input-label">Телефон</label>
+              <div class="input-block__input">
+                <input class="input phone" type="tel" required name="phone" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" id="phone">
+                <div class="errorMessage">Заполните поле 'Телефон'</div>
+              </div>
+            </div>
+            <div class="input-block">
+              <label class="input-block__input-label">Код СМС</label>
+              <div class="input-block__input">
+                <input class="input" type="number" step="1" min="0" max="150" name="code" required id="code">
+                <div class="errorMessage">Заполните поле 'Код СМС'</div>
+              </div>
+            </div>
+            
+            <span class="modal__text sms-code">
+              <span>Повторный код можно запросить через</span>
+              <span class="minutes">01</span>
+              <span>:</span>
+              <span class="seconds">59</span>
+              <span>минут.</span>
+              <a id="sms-code-link" class="sms-code__link link link_disabled">Запросить код повторно</a>
+            </span>
+
+            <button class="button button_small-font submit disabled">Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- js-reg-modal -->
+
+    <div class="modal" id="js-ok">
+      <div class="modal-dialog">
+        <div class="modal__body">
+          <div class="modal__close"><img src="img/icon/close.svg" alt="Закрыть"></div>
+          <div class="modal__caption">Поздравляем!</div><img class="modal__img" src="img/logo/logo_purple.png" alt="Поздравляем!">
+          <div class="modal__text">
+            <p>Первый шаг к своему счастью - сделан !</p>
+            <p>Теперь нужно выбрать способ коммуникации с нами</p>
+            <p>Через предложенные мессенджеры или звонок координатора</p>
+          </div>
+          <div class="bottom-block">
+            <div class="bottom-block__icon-wrap">
+              <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a class="bottom-block__icon-item bottom-block__icon-item_accent" href="#">
+                <i class="fab icon-phone_small"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- js-ok -->
+
+  </body>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/timer.js"></script>
+</html>
