@@ -1,13 +1,14 @@
 'use strict';
 
 $(document).ready(function() {
+  
   // hide/show conversion radio
   $(function () {
     $('label[for=j-yes]').click(function() {
-      $('#radio-conversion').hide('fast');
+      $('#radio-conversion').slideUp();
     });
     $('label[for=j-no]').click(function() {
-      $('#radio-conversion').show('fast');
+      $('#radio-conversion').slideDown();
     });
   });
 
@@ -28,6 +29,8 @@ $(document).ready(function() {
           console.log(msg);
           var obj = jQuery.parseJSON(msg);
           console.log(obj);
+          $('#js-enter-modal').removeClass('show');
+          $('body').removeClass('modal-open');
         });
       
       event.preventDefault();

@@ -60,6 +60,14 @@ $(document).ready(function () {
       resetTimer();
     })
 
+    $('#js-enter-form .button').on('click', function (e) {
+      if ($('#js-enter-form').hasClass('show')) {
+
+      } else {
+        resetTimer();
+      }
+    })
+
     // сброс и старт таймера при клике на "запросить код повторно"
     $('#sms-code-link').on('click', function (e) {
       if ($('#sms-code-link').attr('href')) {
