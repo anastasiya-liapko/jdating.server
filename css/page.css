@@ -489,7 +489,7 @@ body.page {
 .profile__form .input-block__radio-group {
   width: 302px;
 }
-.profile__form .submit {
+.profile__form .button {
   width: 270px;
   height: 57px;
   margin: 0 auto;
@@ -666,7 +666,8 @@ body.page {
 .dropzone .dz-details {
   display: none;
 }
-.dropzone .dz-default {
+.dropzone .dz-default,
+.dropzone .dz-files-names {
   display: none;
 }
 
@@ -770,7 +771,7 @@ body.page {
   .profile__form .textarea,
   .nice-select,
   .nice-select .list,
-  .profile__form .submit,
+  .profile__form .button,
   .file-upload,
   .dropzone {
     width: 100%;

@@ -65,7 +65,7 @@
           <div class="input-block">
             <label class="input-block__input-label">Телефон</label>
             <div class="input-block__input">
-              <input class="input" type="text" required name="phone" maxlength="1000" id="phone" placeholder="+7(324)2343232">
+              <input class="input" type="text" name="phone" maxlength="1000" id="phone" placeholder="+7(324)2343232">
               <div class="errorMessage">Заполните поле 'Телефон'</div>
             </div>
           </div>
@@ -93,7 +93,7 @@
             </div>
           </div>
 
-          <button class="button button_small-font submit disabled">Сохранить</button>
+          <button type="submit" class="button button_small-font">Сохранить</button>
         </form>
         <!-- profile-form-main -->
 
@@ -101,7 +101,7 @@
           <div class="input-block">
             <label class="input-block__input-label">Дата рождения:</label>
             <div class="input-block__input">
-              <input class="input" type="text" required name="birth" maxlength="1000" id="birth" placeholder="12 | 03 | 1994">
+              <input class="input" type="text" name="birth" maxlength="1000" id="birth" placeholder="12 | 03 | 1994">
               <div class="errorMessage">Заполните поле 'Дата рождения'</div>
             </div>
           </div>
@@ -110,7 +110,7 @@
             <label class="input-block__input-label">Фотографии</label>
             <div class="input-block__input">
               <div class="dropzone" id="dropzonewidget">
-                
+            
               </div> 
               <div class="errorMessage">Заполните поле 'Фотографии'</div>
             </div>
@@ -147,7 +147,7 @@
             <div class="input-block__input">
               <textarea 
                 class="input textarea" 
-                required name="phone" 
+                name="phone" 
                 maxlength="1000" 
                 id="social" 
                 placeholder="www.vk.com
@@ -178,7 +178,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Где и на кого ты учишься/учился</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="education-descr" maxlength="1000" id="education-descr" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="education-descr" maxlength="1000" id="education-descr" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Где и на кого ты учишься/учился'</div>
             </div>
           </div>
@@ -196,7 +196,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Расскажи о работе</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="job-descr" maxlength="1000" id="job-descr" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="job-descr" maxlength="1000" id="job-descr" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Расскажи о работе'</div>
             </div>
           </div>
@@ -252,7 +252,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Какие еще языки ты знаешь</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="languages" maxlength="1000" id="languages" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="languages" maxlength="1000" id="languages" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Какие еще языки ты знаешь'</div>
             </div>
           </div>
@@ -260,7 +260,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Есть ли у тебя хобби?</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="hobbies" maxlength="1000" id="hobbies" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="hobbies" maxlength="1000" id="hobbies" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Есть ли у тебя хобби?'</div>
             </div>
           </div>
@@ -304,7 +304,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">В каких еврейских организациях ты бывал</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="organizations" maxlength="1000" id="organizations" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="organizations" maxlength="1000" id="organizations" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'В каких еврейских организациях ты бывал'</div>
             </div>
           </div>
@@ -312,7 +312,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Три твоих достоинства</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="advantages" maxlength="1000" id="advantages" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="advantages" maxlength="1000" id="advantages" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Три твоих достоинства'</div>
             </div>
           </div>
@@ -320,7 +320,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Три твоих недостатка</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="disadvantages" maxlength="1000" id="disadvantages" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="disadvantages" maxlength="1000" id="disadvantages" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Три твоих недостатка'</div>
             </div>
           </div>
@@ -328,7 +328,7 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Что ты ищешь в партнере</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="accept" maxlength="1000" id="accept" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="accept" maxlength="1000" id="accept" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Что ты ищешь в партнере'</div>
             </div>
           </div>
@@ -336,12 +336,12 @@ www.facebook.com"></textarea>
           <div class="input-block input-block-textarea">
             <label class="input-block__input-label input-block__textarea-label">Что ты не приемлешь в партнере</label>
             <div class="input-block__input">
-              <textarea class="input textarea" required name="against" maxlength="1000" id="against" placeholder="Текст"></textarea>
+              <textarea class="input textarea" name="against" maxlength="1000" id="against" placeholder="Текст"></textarea>
               <div class="errorMessage">Заполните поле 'Что ты не приемлишь в партнере'</div>
             </div>
           </div>
 
-          <button class="button button_small-font submit disabled">Сохранить</button>
+          <button type="submit" class="button button_small-font">Сохранить</button>
 
         </form>
         <!-- profile-form-info -->

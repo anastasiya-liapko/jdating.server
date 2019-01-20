@@ -135,14 +135,14 @@
             <div class="input-block">
               <label class="input-block__input-label">Телефон</label>
               <div class="input-block__input">
-                <input class="input phone" type="tel" required name="phone" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" id="phone">
+                <input class="input phone" type="tel" required name="phone-code" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" id="phone-code">
                 <div class="errorMessage">Заполните поле 'Телефон'</div>
               </div>
             </div>
             <div class="input-block">
               <label class="input-block__input-label">Код СМС</label>
               <div class="input-block__input">
-                <input class="input" type="number" step="1" min="0" max="150" name="code" required id="code">
+                <input class="input" type="password" step="1" min="0" max="150" name="code" required id="code">
                 <div class="errorMessage">Заполните поле 'Код СМС'</div>
               </div>
             </div>
@@ -156,7 +156,7 @@
               <a id="sms-code-link" class="sms-code__link link link_disabled">Запросить код повторно</a>
             </span>
 
-            <button class="button button_small-font submit disabled">Войти</button>
+            <button type="submit" class="button button_small-font">Войти</button>
           </form>
         </div>
       </div>

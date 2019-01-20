@@ -3,6 +3,7 @@
 Dropzone.autoDiscover = false;
 $(".dropzone").dropzone({
   url: 'upload.php',
+  acceptedFiles: '.svg, .png, .jpg, .jpeg',
   addRemoveLinks: true,
   removedfile: function(file) {
   var name = file.name; 
